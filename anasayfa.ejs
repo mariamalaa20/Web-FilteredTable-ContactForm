@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Final Sınav</title>
+           
+          <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+          <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        </head>
+  <br>
+        <body>
+          <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="anasayfa">Anasayfa</a></li>
+                    <li><a href="iletisim">Iletisim</a></li>            
+                    <li><a href="https://izu.edu.tr/">Izu</a></li>
+                </ul>
+            </nav>
+            
+          </header>
+<br>
+  <br>
+          <div class="table-data">
+        <form action="/filtrele" method="get">
+        
+      Ilçeler içinde ara: <input type="text" name="filtre">
+
+              <input type="submit" value="Filtrele">
+          
+            </form>
+            <br>
+            <table border="1">
+              <tr>
+                <th>ID</th>
+                <th>IL</th>
+                <th>ILCE</th>
+                <th>KAYITLI</th>
+                <th>OYKULLANAN</th>
+                <th>GECERLI</th>
+                <th>GECERSIZ</th>
+                <th>EVET</th>
+                <th>HAYIR</th>
+              </tr>
+               <% if (userData.length > 0) { %>
+                <% userData.forEach(function(data) { %>
+                  <tr>
+                    <td><%= data.id %></td>
+                    <td><%= data.il %></td>
+                    <td><%= data.ilce %></td>
+                    <td><%= data.kayitli %></td>
+                    <td><%= data.oykullanan %></td>
+                    <td><%= data.gecerli %></td>
+                    <td><%= data.gecersiz %></td>
+                    <td><%= data.evet %></td>
+                    <td><%= data.hayir %></td>
+                  </tr>
+                <% }); %>
+              <% } else { %>
+                <tr>
+                  <td colspan="9">NO DATA FOUND</td>
+                </tr>
+              <% } %>
+            </table>
+          </div>
+              <style>
+
+                body{
+                  margin: 0px;
+                }
+
+                .navbar ul{
+                  list-style-type: none;
+                  background-color: hsl(0, 0%, 25%);
+                  padding: 0px;
+                  margin: 0px;
+                  overflow: hidden;
+                }
+                .navbar a{
+                  color: white;
+                  text-decoration: none;
+                  padding: 15px;
+                  display: block;
+                  text-align: center;
+                }
+                .navbar a:hover{
+                  background-color: hsl(162, 51%, 48%);
+                }
+                .navbar li{
+                  float: left;
+                }
+
+
+             </style>
+              </body>
+
+        </html>

@@ -1,0 +1,94 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+          <ul>
+              <li><a href="anasayfa">Anasayfa</a></li>
+              <li><a href="iletisim">Iletisim</a></li>            
+              <li><a href="https://izu.edu.tr/">Izu</a></li>
+          </ul>
+      </nav>
+    </header>
+    <div>
+    <form action ="/gonder" method ="get">
+      <label>Ad  </label>
+      <br>
+      <input type ="text " name="ad" placeholder="Adınız..">
+      <br>
+      <br>
+      <label>Soyad  </label>
+      <br>
+      
+      <input type ="text" name= "soyad"placeholder="Soyadınız..">
+      <br>
+      <br>
+      <label>Yaşadığınız Şehir   </label>
+      <br>
+      <input type ="text " name="yaşadığınız şehir"placeholder="Şehiriniz" >
+      <br>
+      
+      <br>
+      <label>Konu  </label>
+      <br>
+      <input type ="text " name="konu" placeholder="Mesajınız..">
+      <br>
+      <br>
+      <input type="submit" value ="Submit">
+    </form>
+</div>
+    <style>
+      body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0 25%;
+         margin: 0px;
+
+    }
+        .navbar ul{
+          list-style-type: none;
+          background-color: hsl(0, 0%, 25%);
+          padding: 0px;
+          margin: 0px;
+          overflow: hidden;
+        }
+        .navbar a{
+          color: white;
+          text-decoration: none;
+          padding: 15px;
+          display: block;
+          text-align: center;
+        }
+        .navbar a:hover{
+          background-color: hsl(162, 51%, 48%);
+        }
+        .navbar li{
+          float: left;
+        }
+
+
+
+    label {
+    display: block;
+    margin-bottom: 5px;
+    }
+
+    input,
+    select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+    div{
+      background-color: rgb(247, 247, 247);
+      padding:30pt;
+    }
+
+      </style>
+  </body>
+</html>
